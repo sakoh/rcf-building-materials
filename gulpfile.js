@@ -6,6 +6,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var nunjucks = require('gulp-nunjucks');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -26,6 +27,13 @@ gulp.task('less', function() {
             stream: true
         }))
 });
+
+
+gulp.task('template', () =>
+    gulp.src('templates/greeting.html')
+        .pipe(nunjucks.compile({name: 'Sindre'}))
+        .pipe(gulp.dest('dist'))
+);
 
 // Minify compiled CSS
 gulp.task('minify-css', ['less'], function() {
