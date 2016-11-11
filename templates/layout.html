@@ -34,8 +34,10 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     {% include "partials/nav.html" %}
     {% include "partials/header.html" %}
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
+    {% include "partials/contact.html" %}
+    <!-- Map Section -->
+    <div id="map"></div>
     <!-- Footer -->
     <footer>
         <div class="container text-center">
