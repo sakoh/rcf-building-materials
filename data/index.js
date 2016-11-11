@@ -4,9 +4,28 @@ var fs = require('fs'),
 
 module.exports = {
   site: {
-    name: "Rent A Tool"
+    name: "Rent A Tool",
+    navigation: [
+      {
+        title: "About",
+        url: "#about"
+      },
+      {
+        title: "Download",
+        url: "#download"
+      },
+      {
+        title: "Contact",
+        url: "#contact"
+      },
+      {
+        title: "Location",
+        url: "#map"
+      }
+    ]
   },
   pages: fs.readdirSync('./pages').map(page => {
+
     var page = gm.read(`./pages/${page}`);
     return {
       title: page.data.title,
