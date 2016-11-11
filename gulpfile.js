@@ -7,6 +7,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var nunjucks = require('gulp-nunjucks');
+var data = require('./data');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -74,7 +75,7 @@ gulp.task('copy', function() {
 // Compile template
 gulp.task('template', () =>
     gulp.src('templates/index.html')
-        .pipe(nunjucks.compile({name: 'Sindre'}))
+        .pipe(nunjucks.compile(data))
         .pipe(gulp.dest('dist'))
 );
 
@@ -96,6 +97,6 @@ gulp.task('dev', ['sass', 'minify-css', 'minify-js', 'template','copy', 'browser
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
-    gulp.watch('*.html', browserSync.reload);
+    gulp.watch('templates/**/*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
