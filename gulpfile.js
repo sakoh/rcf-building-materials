@@ -96,7 +96,8 @@ gulp.task('dev', ['sass', 'minify-css', 'minify-js', 'template','copy', 'browser
     gulp.watch('sass/*.sass', ['sass']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
-    // Reloads the browser whenever HTML or JS files change
-    gulp.watch('templates/**/*.html', browserSync.reload);
+    // Reloads the browser whenever HTML, MARKDOWN or JS files change
+    gulp.watch('templates/**/*.html', ['template'], browserSync.reload);
+    gulp.watch('pages/**/*.md', ['template'], browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
