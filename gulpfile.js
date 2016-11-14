@@ -18,26 +18,14 @@ var banner = ['/*!\n',
     ''
 ].join('');
 
-// Compile sass files from /sass into /css
+// Compile sass files from /sass into /css and minify it
 gulp.task('sass', function() {
-    return gulp.src('sass/grayscale.sass')
+    return gulp.src('sass/grayscale.scss')
         .pipe(sass())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
-});
-
-// Minify compiled CSS
-gulp.task('minify-css', ['sass'], function() {
-    return gulp.src('css/grayscale.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        .pipe(gulp.dest('dist/css'));
 });
 
 // Minify JS
@@ -46,10 +34,7 @@ gulp.task('minify-js', function() {
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('dist/js'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+        .pipe(gulp.dest('dist/js'));
 });
 
 // Copy vendor libraries from /node_modules into /vendor
@@ -70,6 +55,9 @@ gulp.task('copy', function() {
         ])
         .pipe(gulp.dest('dist/vendor/font-awesome'))
 
+    gulp.src(['img/*.{jpg|png}'])
+        .pipe(gulp.dest('dist/img'));
+
 })
 
 // Compile template
@@ -80,7 +68,7 @@ gulp.task('template', () =>
 );
 
 // Run everything
-gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy', 'template']);
+gulp.task('default', ['sass', 'minify-js', 'copy', 'template']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -92,9 +80,8 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['sass', 'minify-css', 'minify-js', 'template','copy', 'browserSync'], function() {
-    gulp.watch('sass/*.sass', ['sass']);
-    gulp.watch('css/*.css', ['minify-css']);
+gulp.task('dev', ['sass', 'minify-js', 'template','copy', 'browserSync'], function() {
+    gulp.watch('sass/*.scss', ['sass']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML, MARKDOWN or JS files change
     gulp.watch('templates/**/*.html', ['template'], browserSync.reload);

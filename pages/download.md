@@ -1,6 +1,7 @@
 ---
+id: 2
 title: Download Grayscale
-id: download
+url: download
 ---
 You can download Grayscale for free on the preview page at Start Bootstrap.
 
