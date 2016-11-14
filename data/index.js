@@ -34,7 +34,7 @@ module.exports = {
       }
     ]
   },
-  pages: fs.readdirSync('./pages').sort(byID).map(page => {
+  pages: fs.readdirSync('./pages').map(page => {
 
     var page = gm.read(`./pages/${page}`);
 
@@ -44,5 +44,5 @@ module.exports = {
       url: page.data.url,
       content: marked(page.content)
     }
-  })
+  }).sort(byID)
 }

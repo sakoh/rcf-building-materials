@@ -55,7 +55,7 @@ gulp.task('copy', function() {
         ])
         .pipe(gulp.dest('dist/vendor/font-awesome'))
 
-    gulp.src(['img/*.{jpg|png}'])
+    gulp.src('img')
         .pipe(gulp.dest('dist/img'));
 
 })
@@ -87,4 +87,5 @@ gulp.task('dev', ['sass', 'minify-js', 'template','copy', 'browserSync'], functi
     gulp.watch('templates/**/*.html', ['template'], browserSync.reload);
     gulp.watch('pages/**/*.md', ['template'], browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
+    console.log(data);
 });
