@@ -40,18 +40,18 @@ gulp.task('minify-js', function() {
 // Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', function() {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
-        .pipe(gulp.dest('dist/vendor/bootstrap'))
+        .pipe(gulp.dest('dist/vendor/bootstrap'));
 
     gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('dist/vendor/jquery'))
+        .pipe(gulp.dest('dist/vendor/jquery'));
 
     gulp.src(['node_modules/font-awesome/fonts/**/*'])
-        .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest('dist/fonts'));
         
     gulp.src('img/**/*')
         .pipe(gulp.dest('dist/img'))
 
-})
+});
 
 // Compile template
 gulp.task('template', () =>
@@ -70,7 +70,7 @@ gulp.task('browserSync', function() {
             baseDir: 'dist'
         },
     })
-})
+});
 
 // Dev task with browserSync
 gulp.task('dev', ['sass', 'minify-js', 'template','copy', 'browserSync'], function() {
