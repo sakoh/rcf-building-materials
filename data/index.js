@@ -25,6 +25,10 @@ module.exports = {
         url: "#download"
       },
       {
+        title: "Gallery",
+        url: "#gallery"
+      },
+      {
         title: "Contact",
         url: "#contact"
       },
