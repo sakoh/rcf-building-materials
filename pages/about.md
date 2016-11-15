@@ -4,4 +4,4 @@ title: About Us
 url: about
 ---
 
-We here at Rent A Tool provide the best
+Rent A Tool is a family owned business that provides you all of your construction needs. The tools we sell or lend out include bricks and motors, pipes, forklifts, lawnmowers. 
