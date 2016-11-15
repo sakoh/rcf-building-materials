@@ -36,7 +36,7 @@ module.exports = {
   },
   pages: fs.readdirSync('./pages').map(page => {
 
-    var page = gm.read(`./pages/${page}`);
+    page = gm.read(`./pages/${page}`);
 
     return {
       title: page.data.title,
@@ -45,4 +45,4 @@ module.exports = {
       content: marked(page.content)
     }
   }).sort(byID)
-}
+};
