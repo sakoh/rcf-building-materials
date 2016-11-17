@@ -40,7 +40,7 @@ p.intro {
 	line-height: 24px;
 }
 a {
-	color: #cab17a;
+	color: #ca7b45;
 	font-weight: 400;
 }
 a:hover, a:focus {
@@ -94,7 +94,7 @@ hr {
 	width: 80px;
 	text-align: center;
 	position: relative;
-	background: #cab17a;
+	background: #ca7b45;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	border: 0;
@@ -127,7 +127,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #menu.navbar-default .navbar-nav > li > a {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
-	color: #cab17a;
+	color: #ca7b45;
 	font-size: 14px;
 	padding: 5px 0;
 	border-radius: 0;
@@ -141,7 +141,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	bottom: -3px;
 	width: 0;
 	height: 2px;
-	background-color: #cab17a;
+	background-color: #ca7b45;
 	content: "";
 	transition: width 0.2s;
 }
@@ -163,7 +163,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	bottom: -3px !important;
 	width: 100% !important;
 	height: 2px !important;
-	background-color: #cab17a !important;
+	background-color: #ca7b45 !important;
 	content: "" !important;
 	transition: width 0.2s !important;
 }
@@ -171,8 +171,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	border-radius: 0;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: #cab17a;
-	border-color: #cab17a;
+	background-color: #ca7b45;
+	border-color: #ca7b45;
 }
 .navbar-default .navbar-toggle:hover>.icon-bar {
 	background-color: #FFF;
@@ -189,7 +189,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	position: relative;
 	text-transform: uppercase;
 	color: #fff;
-	background-color: #cab17a;
+	background-color: #ca7b45;
 	border: 0;
 	padding: 14px 20px;
 	margin: 0;
@@ -200,7 +200,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	transition: all 0.5s;
 }
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
-	color: #cab17a;
+	color: #ca7b45;
 	background-color: #fff;
 	text-shadow: 0 0 6px #fff;
 	box-shadow: 0 0 10px rgba(0,0,0,0.05);
@@ -235,7 +235,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	letter-spacing: -1px;
 }
 .intro h1 span {
-	color: #cab17a;
+	color: #ca7b45;
 	margin: 0 5px;
 }
 .intro p {
@@ -256,7 +256,7 @@ header .intro-text {
 	background: #f6f6f6;
 }
 #services img {
-	box-shadow: -5px -10px #cab17a;
+	box-shadow: -5px -10px #ca7b45;
 }
 #services h3 {
 	padding: 10px 0;
@@ -265,7 +265,7 @@ header .intro-text {
 	font-size: 38px;
 	margin-bottom: 20px;
 	transition: all 0.5s;
-	color: #cab17a;
+	color: #ca7b45;
 	padding: 20px 0;
 	border: 0;
 }
@@ -286,18 +286,18 @@ ol.type li {
 }
 ol.type li a {
 	font-family: 'Montserrat', sans-serif;
-	color: #cab17a;
+	color: #ca7b45;
 	padding: 10px 20px;
-	border: 1px solid #cab17a;
+	border: 1px solid #ca7b45;
 	border-radius: 0;
 	text-transform: uppercase;
 }
 ol.type li a.active {
-	background: #cab17a;
+	background: #ca7b45;
 	color: #fff;
 }
 ol.type li a:hover {
-	background: #cab17a;
+	background: #ca7b45;
 	color: #fff;
 }
 .isotope-item {
@@ -389,7 +389,7 @@ ol.type li a:hover {
 }
 #about img {
 	display: inline-block;
-	box-shadow: -5px -10px #cab17a;
+	box-shadow: -5px -10px #ca7b45;
 }
 #about p {
 	line-height: 24px;
@@ -469,7 +469,7 @@ ol.type li a:hover {
 #choose li {
 }
 #choose li i {
-	color: #cab17a;
+	color: #ca7b45;
 	float: left;
 	font-size: 38px;
 	padding: 1px 0 0 15px;
@@ -480,7 +480,7 @@ ol.type li a:hover {
 	margin-bottom: 50px;
 }
 #choose h4 {
-	color: #cab17a;
+	color: #ca7b45;
 	padding: 0 0 0 80px;
 	font-weight: 300;
 	margin-bottom: 5px;
@@ -553,7 +553,7 @@ color: #777;
 }
 #contact .contact-item span {
 	font-weight: 400;
-	color: #cab17a;
+	color: #ca7b45;
 	font-size: 16px;
 	text-transform: uppercase;
 	margin-bottom: 18px;
@@ -580,7 +580,7 @@ color: #777;
 #footer .social i.fa {
 	font-size: 26px;
 	padding: 4px;
-	color: #cab17a;
+	color: #ca7b45;
 	transition: all 0.3s;
 }
 #footer .social i.fa:hover {
