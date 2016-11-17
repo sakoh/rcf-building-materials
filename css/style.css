@@ -537,16 +537,16 @@ label {
 	box-shadow: transparent;
 }
 .form-control::-webkit-input-placeholder {
-color: #777;
+	color: #777;
 }
 .form-control:-moz-placeholder {
-color: #777;
+	color: #777;
 }
 .form-control::-moz-placeholder {
-color: #777;
+	color: #777;
 }
 .form-control:-ms-input-placeholder {
-color: #777;
+	color: #777;
 }
 #contact .contact-item {
 	margin: 20px 0 40px 0;
