@@ -1,6 +1,6 @@
 module.exports = {
   site: {
-    name: "Rent A Tool",
+    name: "RCF Building Materials, Inc",
     navigation: [
       {
         title: "About",

@@ -7,3 +7,8 @@ dist
 .idea/modules.xml
 .idea/rent-a-tool.iml
 .idea/workspace.xml
+css/bootstrap.css
+css/bootstrap.min.css
+css/animate.min.css
+css/nivo-lightbox
+fonts
