@@ -18,16 +18,6 @@ var banner = ['/*!\n',
     ''
 ].join('');
 
-// Compile sass files from /sass into /css and minify it
-gulp.task('sass', function() {
-    return gulp.src('sass/grayscale.scss')
-        .pipe(sass())
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('dist/css'));
-});
-
 // Minify JS
 gulp.task('minify-js', function() {
     return gulp.src('js/grayscale.js')
@@ -37,19 +27,19 @@ gulp.task('minify-js', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-// Copy vendor libraries from /node_modules into /vendor
+// Copy root libraries from /dist
 gulp.task('copy', function() {
-    gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
-        .pipe(gulp.dest('dist/vendor/bootstrap'));
+    gulp.src('css/**/*')
+        .pipe(gulp.dest('dist/css'));
 
-    gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('dist/vendor/jquery'));
-
-    gulp.src(['node_modules/font-awesome/fonts/**/*'])
+    gulp.src('fonts/**/*')
         .pipe(gulp.dest('dist/fonts'));
         
     gulp.src('img/**/*')
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest('dist/img'));
+
+    gulp.src('js/**/*')
+        .pipe(gulp.dest('dist/js'));
 
 });
 
@@ -61,7 +51,7 @@ gulp.task('template', () =>
 );
 
 // Run everything
-gulp.task('default', ['sass', 'minify-js', 'copy', 'template']);
+gulp.task('default', ['minify-js', 'copy', 'template']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -73,7 +63,7 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task with browserSync
-gulp.task('dev', ['sass', 'minify-js', 'template','copy', 'browserSync'], function() {
+gulp.task('dev', ['minify-js', 'template','copy', 'browserSync'], function() {
     gulp.watch('sass/*.scss', ['sass']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML, MARKDOWN or JS files change

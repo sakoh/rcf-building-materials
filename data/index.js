@@ -37,16 +37,5 @@ module.exports = {
         url: "#map"
       }
     ]
-  },
-  pages: fs.readdirSync('./pages').map(page => {
-
-    page = gm.read(`./pages/${page}`);
-
-    return {
-      title: page.data.title,
-      id: page.data.id,
-      url: page.data.url,
-      content: marked(page.content)
-    }
-  }).sort(byID)
+  }
 };

@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% include "partials/head.html" %}
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    {% include "partials/nav.html" %}
-    {% include "partials/header.html" %}
-    {% block content %}{% endblock %}
-    <!-- Map Section -->
-    <div id="map"></div>
-    {% include "partials/footer.html" %}
-</body>
-
-</html>
+{% include "partials/nav.html" %}
+{% include "partials/header.html" %}
+{% block content %}{% endblock %}
+{% include "partials/footer.html" %}
