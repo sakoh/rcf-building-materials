@@ -23,114 +23,17 @@
     </div>
     <div class="row">
       <div class="portfolio-items">
-        <div class="col-sm-6 col-md-3 col-lg-3 residential">
+        {% for item in gallery %}
+        <div class="col-sm-6 col-md-3 col-lg-3 {{ item.category }}">
           <div class="portfolio-item wow fadeInUp" data-wow-delay="200ms">
-            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href="img/portfolio/{{ item.img_name }}-large.jpg" title="{{ item.name }}" data-lightbox-gallery="gallery1">
                 <div class="hover-text">
-                  <h4>Project Name</h4>
+                  <h4>{{ item.name }}</h4>
                 </div>
-                <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+                <img src="img/portfolio/{{ item.img_name }}-small.jpg" class="img-responsive" alt="{{ item.name }}"> </a> </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 commercial">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="400ms">
-            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 residential">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="600ms">
-            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 residential">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="800ms">
-            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 commercial">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="1000ms">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 office">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="1200ms">
-            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 office">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="1400ms">
-            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 residential">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="1600ms">
-            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 commercial">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="1800ms">
-            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 office">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="2000ms">
-            <div class="hover-bg"> <a href="img/portfolio/10-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/10-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 office">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="2200ms">
-            <div class="hover-bg"> <a href="img/portfolio/11-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/11-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 residential">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="2400ms">
-            <div class="hover-bg"> <a href="img/portfolio/12-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-                <div class="hover-text">
-                  <h4>Project Name</h4>
-                </div>
-                <img src="img/portfolio/12-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
