@@ -70,4 +70,5 @@ gulp.task('dev', ['minify-js', 'template','copy', 'browserSync'], function() {
     gulp.watch('templates/**/*.html', ['template'], browserSync.reload);
     gulp.watch('pages/**/*.md', ['template'], browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
+    gulp.watch('img/**/*', ['template'], browserSync.reload);
 });
