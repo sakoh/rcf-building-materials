@@ -3,15 +3,31 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a class="navbar-brand page-scroll" href="#page-top" style="text-transform: uppercase">{{ site.name }}</a> </div>
+            <a class="navbar-brand page-scroll" href="#page-top" style="text-transform: uppercase">
+                <span id="nav-logo" class="hidden-sm hidden-xs">
+                    <svg viewbox="0 1 40 60" preserveAspectRatio="none" width="2%"  xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,20 L70,00 L25,100 L0,100z" fill="white"></path>
+                    </svg>
+                    <svg viewbox="0 1 30 60" preserveAspectRatio="none" width="2%"  xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,20 L70,00 L25,100 L0,100z" fill="white"></path>
+                    </svg>
+                    <svg viewbox="0 0 30 51" preserveAspectRatio="none" width="2%"  xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,0 L100,20 L100,80 L0,100z" fill="white"></path>
+                    </svg>
+                    <svg viewbox="0 0 30 40" preserveAspectRatio="none" width="2%">
+                        <path d="M0,0 L100,20 L100,80 L0,100z" fill="white"></path>
+                    </svg>
+                </span>
+
+                {{ site.name }}
+            </a> </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#services" class="page-scroll">Services</a></li>
-                <li><a href="#portfolio" class="page-scroll">Projects</a></li>
+                <li><a href="#products" class="page-scroll">Products</a></li>
                 <li><a href="#about" class="page-scroll">About</a></li>
-                <li><a href="#team" class="page-scroll">Team</a></li>
                 <li><a href="#contact" class="page-scroll">Contact</a></li>
             </ul>
         </div>

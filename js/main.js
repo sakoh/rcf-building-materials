@@ -53,9 +53,9 @@ function main() {
     }
   });
 	
-  	// Portfolio isotope filter
+  	// Products isotope filter
     $(window).load(function() {
-        var $container = $('.portfolio-items');
+        var $container = $('.products-items');
         $container.isotope({
             filter: '*',
             animationOptions: {
@@ -82,7 +82,7 @@ function main() {
     });
 	
     // Nivo Lightbox 
-    $('.portfolio-item a').nivoLightbox({
+    $('.products-item a').nivoLightbox({
             effect: 'slideDown',  
             keyboardNav: true,                            
         });

@@ -1,8 +1,8 @@
-<!-- Portfolio Section -->
-<div id="portfolio">
+<!-- Products Section -->
+<div id="products">
   <div class="container">
     <div class="section-title text-center center wow fadeInDown">
-      <h2>Projects</h2>
+      <h2>Products</h2>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
     </div>
@@ -12,25 +12,25 @@
       <ul class="cat">
         <li>
           <ol class="type">
-            <li><a href="#" data-filter="*" class="active">All Projects</a></li>
-            <li><a href="#" data-filter=".residential">Residential</a></li>
-            <li><a href="#" data-filter=".office">Office</a></li>
-            <li><a href="#" data-filter=".commercial">Commercial</a></li>
+            <li><a href="#" data-filter="*" class="active">All Products</a></li>
+            <li><a href="#" data-filter=".masonry">Masonry</a></li>
+            <li><a href="#" data-filter=".rentals">Rentals</a></li>
+            <li><a href="#" data-filter=".irrigation">Irrigation</a></li>
           </ol>
         </li>
       </ul>
       <div class="clearfix"></div>
     </div>
     <div class="row">
-      <div class="portfolio-items">
+      <div class="products-items">
         {% for item in gallery %}
         <div class="col-sm-6 col-md-3 col-lg-3 {{ item.category }}">
-          <div class="portfolio-item wow fadeInUp" data-wow-delay="200ms">
-            <div class="hover-bg"> <a href="img/portfolio/{{ item.img_name }}-large.jpg" title="{{ item.name }}" data-lightbox-gallery="gallery1">
+          <div class="products-item wow fadeInUp" data-wow-delay="200ms">
+            <div class="hover-bg"> <a href="img/products/{{ item.img_name }}.jpg" title="{{ item.name }}" data-lightbox-gallery="gallery1">
                 <div class="hover-text">
                   <h4>{{ item.name }}</h4>
                 </div>
-                <img src="img/portfolio/{{ item.img_name }}-small.jpg" class="img-responsive" alt="{{ item.name }}"> </a> </div>
+                <img src="img/products/{{ item.img_name }}.jpg" class="img-responsive" alt="{{ item.name }}"> </a> </div>
           </div>
         </div>
         {% endfor %}

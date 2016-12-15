@@ -269,8 +269,8 @@ header .intro-text {
 	padding: 20px 0;
 	border: 0;
 }
-/* Portfolio Section */
-#portfolio {
+/* Products Section */
+#products {
 	padding: 120px 0;
 }
 .categories {
@@ -331,10 +331,10 @@ ol.type li a:hover {
 	-moz-transition-property: -moz-transform, opacity;
 	transition-property: transform, opacity;
 }
-.portfolio-item {
+.products-item {
 	margin: 10px 0;
 }
-.portfolio-item .hover-bg {
+.products-item .hover-bg {
 	overflow: hidden;
 	position: relative;
 }
@@ -370,7 +370,7 @@ ol.type li a:hover {
 .hover-bg:hover .hover-text {
 	opacity: 1;
 }
-#portfolio i.fa {
+#products i.fa {
 	font-size: 20px;
 	padding: 5px;
 	color: #E87E04;
