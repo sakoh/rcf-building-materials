@@ -54,13 +54,13 @@ module.exports = {
       category: "rentals"
     },
     {
-      img_name: "plastic-tees",
-      name: "Plastic Tees",
+      img_name: "copper-pipe-elbows",
+      name: "Copper Pipe Elbows",
       category: "irrigation"
     },
     {
-      img_name: "copper-pipe-elbows",
-      name: "Copper Pipe Elbows",
+      img_name: "plastic-tees",
+      name: "Plastic Tees",
       category: "irrigation"
     }
   ]
